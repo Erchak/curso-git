@@ -1,0 +1,76 @@
+<!DOCTYPE html>  <!--CTRL + Shift + P: Para abrir el buscador de VS Code, escribir 'terminal'
+                     para crear una nueva y nos dirijimos a Git Bash para cambiar la terminal que viene por 
+                     defecto con VS Code. Git Bash está diseñado para trabajar con Git.                     
+                    
+                     Click Derecho en el lateral izquierdo de archivos y seleccionar: "Reveal in File Explorer"
+                                esto sirve para arrastrar el index.html a nuestro navegador y ver nuestro avance.
+                     -->
+                
+                <!-- Lista de Comandos -->
+                <!-- pwd = "print working directory": Muestra la ruta completa del directorio en el que nos
+                                                      encontramos actualmente.
+                     
+                     ls = "list": Lista el contenido del directorio actual, (archivos del lateral izquierdo
+                                  en el directorio de trabajo) archivos y carpetas y lo muestra por consola.
+                                  
+                                  
+                                  
+
+                     git init = Inicializa un nuevo repositorio de Git, (el repositorio es una carpeta en donde
+                                Git maneja todas las versiones de un proyecto. Contiene además todos los archivos
+                                de nuestro proyecto, así como un subdirectorio .git que almacena toda la informa-
+                                ción necesaria para gestionar las versiones del proyecto.) Este comando crea un
+                                nuevo subdirectorio llamado .git en el directorio (carpeta) actual.
+                    
+                                Utilidades de git init:
+                                   
+                                   1.- Crear un nuevo repositorio vacío: Al comenzar un nuevo proyecto utilizamos
+                                       git init para crear un repositorio desde 0.
+                                    
+                                   2.- Convertir un proyecto existente: Si ya tenemos un proyecto sin control de
+                                       versiones, podemos convertirlo en un repositorio Git ejecutando git init
+                                       en el directorio del proyecto.     
+                     
+                     git status = Muestra el estado actual del directorio de trabajo y del área de preparación
+                                  (Staging Area = Cambios pendientes de ser confirmados) en un repositorio Git.
+
+                                  Utilidades de git status:
+
+                                   1.- Archivos preparados para commit (1. Working Tree = Directorio de Trabajo
+                                       (Carpeta donde está nuestro proyecto) 2. Staging Area = Área de Preparación
+                                       3. Commited = "Comprometido", cambios que han sido guardados en el historial
+                                       del repositorio.)
+
+                     * Este comando es muy útil para tener una visión general de los cambios del proyecto antes
+                       de realizar un commit, asegurándonos de no olvidarnos de añadir ningún archivo importante
+                       o de preparar los cambios necesarios.
+                     
+                     * Untracked files: ficheros sin seguimiento (archivos no rastreados) existen en nuestro
+                       directorio de trabajo pero sin ser añadidos aún al índice de Git (Staging Area). Esto
+                       significa que Git no está siguiendo estos archivos, por lo tanto, no los icluirá en 
+                       los commits a menos que los añadamos explícitamente.
+
+                     git add: Añade los cambios en el directorio de trabajo al índice (Staging Area). Esto
+                     prepara los archivos y cambios para ser incluidos en el próximo commit.
+
+                     * Working Tree = Directorio de Trabajo.
+                    --> 
+                                
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Overpass+Mono&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+    <title>Blog Curso-Git</title>
+</head>
+<body>
+    <div>
+        <img src="img/logo-logo-git-line-cheat-sheet-signage-cheating-mug-png-clipart.jpg">
+        <h1>Blog Curso-Git</h1>
+    </div>
+</body>
+</html>
