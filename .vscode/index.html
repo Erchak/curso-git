@@ -2,8 +2,8 @@
                      para crear una nueva y nos dirijimos a Git Bash para cambiar la terminal que viene por 
                      defecto con VS Code. Git Bash está diseñado para trabajar con Git.                     
                     
-                     Click Derecho en el lateral izquierdo de archivos y seleccionar: "Reveal in File Explorer"
-                                esto sirve para arrastrar el index.html a nuestro navegador y ver nuestro avance.
+                   Click Derecho en el lateral izquierdo de archivos y seleccionar: "Reveal in File Explorer"
+                            esto sirve para arrastrar el index.html a nuestro navegador y ver nuestro avance.
                      -->
                 
                 <!-- Lista de Comandos -->
@@ -13,8 +13,8 @@
                      ls = "list": Lista el contenido del directorio actual, (archivos del lateral izquierdo
                                   en el directorio de trabajo) archivos y carpetas y lo muestra por consola.
                                   
-                                  
-                                  
+                     ls -la = Muestra todos los archivos y  directorios, incluidos los ocultos en nuestro             
+                              directorio actual. (Útil en caso de que el comando anterior "ls" no los muestre)    
 
                      git init = Inicializa un nuevo repositorio de Git, (el repositorio es una carpeta en donde
                                 Git maneja todas las versiones de un proyecto. Contiene además todos los archivos
@@ -22,7 +22,7 @@
                                 ción necesaria para gestionar las versiones del proyecto.) Este comando crea un
                                 nuevo subdirectorio llamado .git en el directorio (carpeta) actual.
                     
-                                Utilidades de git init:
+                              - Utilidades de git init:
                                    
                                    1.- Crear un nuevo repositorio vacío: Al comenzar un nuevo proyecto utilizamos
                                        git init para crear un repositorio desde 0.
@@ -36,24 +36,100 @@
 
                                   Utilidades de git status:
 
-                                   1.- Archivos preparados para commit (1. Working Tree = Directorio de Trabajo
-                                       (Carpeta donde está nuestro proyecto) 2. Staging Area = Área de Preparación
-                                       3. Commited = "Comprometido", cambios que han sido guardados en el historial
-                                       del repositorio.)
+                            1.- Archivos preparados para commit (1. Working Tree = Directorio de Trabajo
+                                (Carpeta donde está nuestro proyecto) 2. Staging Area = Área de Preparación
+                                3. Commited = "Comprometido", cambios que han sido guardados en el historial
+                                   del repositorio.)
 
-                     * Este comando es muy útil para tener una visión general de los cambios del proyecto antes
+                    * Este comando es muy útil para tener una visión general de los cambios del proyecto antes
                        de realizar un commit, asegurándonos de no olvidarnos de añadir ningún archivo importante
                        o de preparar los cambios necesarios.
                      
-                     * Untracked files: ficheros sin seguimiento (archivos no rastreados) existen en nuestro
+                    * Untracked files (U): ficheros sin seguimiento (archivos no rastreados) existen en nuestro
                        directorio de trabajo pero sin ser añadidos aún al índice de Git (Staging Area). Esto
                        significa que Git no está siguiendo estos archivos, por lo tanto, no los icluirá en 
                        los commits a menos que los añadamos explícitamente.
 
-                     git add: Añade los cambios en el directorio de trabajo al índice (Staging Area). Esto
-                     prepara los archivos y cambios para ser incluidos en el próximo commit.
+                    git add (A): Añade los cambios en el directorio de trabajo al índice (Staging Area). Esto
+                    prepara los archivos y cambios para ser incluidos en el próximo commit.
 
-                     * Working Tree = Directorio de Trabajo.
+                    "M" = Esta letra presente en uno de nuestros archivos del proyecto quiere decir 
+                          que hemos modificado un archivo que ya estaba siendo rastreado por Git.
+                          Esto indica que el archivo a cambiado desde la última vez que se realizó
+                          un commit, pero dichos cambios aún no han sido añadidos al área de prepa-
+                          ración (Staging Area) para ser confirmados (Committed).
+
+                    * Esta letra se muestra cuando ejecutamos el comando git status.
+                    * Esto da una visión general de los archivos que han sido modificados, añadidos
+                      o eliminados en nuestro repositorio.
+
+                    git reset: Quita todos los archivos del Staging Area. (útil si agregamos sin querer to-
+                               dos los archivos de nuestro proyecto al Staging Area)
+
+                    git commit: Guarda todos los cambios del Staging Area en el repositorio como un nuevo co-
+                                mmit.
+                    
+                    git commit -m: Se utiliza para añadir un mensaje de commit, breve descripción de los cam-
+                                   bios confirmados en el repositorio.
+
+                    ¿Qué es el Hash de un Commit?
+
+                    Es un identificador único que se genera automáticamente cada vez que se realiza
+                    un commit. Es una cadena de caracteres alfanuméricos que se utiliza para identi-
+                    ficar de manera única ese commit en el repositorio. 
+
+                    Cada Hash es único, y permite a los desarrolladores navegar por el historial de 
+                    cambios de un proyecto, facilitando la colaboración y la resolución de problemas.
+
+                    git log: Ve el historial de commits de nuestro repositorio. Incluye detalles como el au-
+                             tor, la fecha y el mensaje del commit.
+
+                           - Utilidades de git log:
+                               
+                              1.- Rastreo de Cambios: Facilita el seguimiento de qué cambios se hicieron, 
+                                  cuándo y por quién.
+
+                              2.- Resolución de Problemas: Ayuda a identificar cuándo y dónde se introdujeron 
+                                  errores.
+
+                              3.- Colaboración: Mejora la comunicación y la colaboración en equipos al propor-
+                                  cionar un historial claro de los cambios.
+
+                    clear: Limpia la terminal. (Atajo: CTRL + L).
+
+                    Problemas / Errores Comunes:
+
+                        1.- "Author identity unknown
+                         *** Please tell me who you are. 
+                         Run
+
+                            git config --global user.email "you@example.com"
+                            git config --global user.name "Your Name" to set your account's default identity.
+                           
+                        Omit --global to set the identity only in this repository.
+                        fatal: unable to auto-detect email address"
+                    <---------------------------------------------------------------------------------------
+                        Explicación: Este error ocurre porque Git no tiene configurada nuestra identidad de 
+                        usuario, lo cual es necesario para registrar quién realiza los commits.
+                              
+                        Git necesita saber quienes somos para poder asociar nuestros cambios con nuestro 
+                        nombre y correo electrónico.
+                        
+                    Solución: Ingresar correo electrónico y nombre reales después del comando git config 
+                             --global user.email "e-mail". (--global para que esta configuración se aplique
+                             a todos los repositorios de nuestra máquina. Útil si siempre usamos el mismo
+                             nombre y correo electrónico para todos nuestros proyectos).
+
+                             * Sin --global: Para configurar la identidad solo para el repositorio actual,
+                                             útil si usamos diferentes identidades para diferentes proyectos.
+                    
+                    Verificación: Para asegurarnos de que la configuración o cambios realizados se han apli-
+                                  cado correctamente, utilizamos los comandos:
+
+                                        git config --global -- list # Para configuración global.
+                                        git config --list # Para configuración del repositorio actual.              
+                                             
+                                        * Working Tree = Directorio de Trabajo.
                     --> 
                                 
 <html lang="en">
@@ -71,6 +147,9 @@
     <div>
         <img src="img/logo-logo-git-line-cheat-sheet-signage-cheating-mug-png-clipart.jpg">
         <h1>Blog Curso-Git</h1>
+    </div>
+    <div>
+        Aquí irá el contenido del blog
     </div>
 </body>
 </html>
