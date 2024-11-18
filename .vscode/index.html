@@ -66,17 +66,26 @@
                     git reset: Quita todos los archivos del Staging Area. (útil si agregamos sin querer to-
                                dos los archivos de nuestro proyecto al Staging Area)
 
+                    *git reset bg65aj1 <- Colocar las iniciales del HASH del commit del que se desea reiniciar.
+
                     git commit: Guarda todos los cambios del Staging Area en el repositorio como un nuevo co-
                                 mmit.
                     
                     git commit -m: Se utiliza para añadir un mensaje de commit, breve descripción de los cam-
                                    bios confirmados en el repositorio.
 
+                    *Luego de esto agregar correo y nombre de desarrollador.
+
                     git checkout: Se utiliza para restaurar archivos, navegar por el historial
                                   de commits y cambiar entre ramas.
 
+                    *Para volver a uno de los commits enviados, por ejemplo una versión en donde una parte del
+                     código de un programa existe y otra en donde no, debebos escribir:
+                     
+                     git checkout 6db8ds <- Iniciales del HASH del commit.
+
                     git checkout master: Cambia nuestro directorio de trabajo a la rama master (predeterminada) la cual es
-                                         la rama principal de un repositorio. Aquí se integran los cambios más improtantes,
+                                         la rama principal de un repositorio. Aquí se integran los cambios más importantes,
                                          estables y oficiales del proyecto.
                                                           
                     clear: Limpia la terminal. (Atajo: CTRL + L).
@@ -105,7 +114,7 @@
                     cambios de un proyecto, facilitando la resolución de problemas.
 
                     git log: Ve el historial de commits de nuestro repositorio. Incluye detalles como el au-
-                             tor, la fecha y el mensaje del commit.
+                             tor, la fecha y el mensaje del commit. Para salir del git log presionar "q".
 
                            - Utilidades de git log:
                                
@@ -123,10 +132,17 @@
                     Es cuando el puntero (HEAD) apunta directamente a un commit específico en lugar de apuntar a una rama.
                     Esto significa que estamos trabajando en un estado donde los cambios no están asociados a ninguna rama.
                     
+                    *Si estamos en un último commit y hacemos un checkout con el HASH de ese commit siempre
+                     estaremos en detached HEAD, donde los cambios no se aplicarán porque no estarán asociados
+                     a ninguna rama. Para evitar esto, hacer git checkout "nombre de la rama" en este caso el
+                     nombre de la rama es "master". Esto nos devuelve al último commit que hemos hecho.
+
                     ¿Qué es el HEAD?
 
-                    Puntero que indica la referencia actual en la que estamos trabajando, normalmente, el HEAD apunta al
-                    último commit de la rama en la que nos encontramos en lugar de a la rama como tal.
+                    Puntero que indica la referencia actual en la que estamos trabajando, normalmente, el HEAD 
+                    apunta al último commit de la rama (HEAD -> master) en la que nos encontramos en lugar de a 
+                    la rama como tal.
+                    
 
                     Utilidades de detached HEAD:
 
@@ -198,7 +214,7 @@
         <h1>Blog Curso-Git</h1>
     </div>
     <div>
-        Aquí irá el contenido del blog
+        Ubicacion del contenido del blog.
     </div>
     <h1>Ranking de Videojuegos para PC 2023</h1>
 <ul>
