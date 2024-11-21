@@ -82,6 +82,19 @@
                     git restore --staged nombre_del_archivo: Elimina el archivo del área de preparación, pero mantiene
                                                              los cambios en el área de trabajo.
 
+                    git pull: Se utiliza para actualizar el repositorio local con los cambios más recientes del repositorio
+                              remoto.
+
+                    *Es una combinación de 2 comandos: git fetch (para descargar los cambios) y git merge (para fusionar 
+                                                       esos cambios en tu rama actual). 
+                                                       
+                    ¿Cuándo usar git pull?
+                    Mantener tu repositorio actualizado: Usamos git pull regularmente para asegurarnos de que nuestro 
+                                                         repositorio local esté sincronizado con el repositorio remoto.                                                        
+
+                    Colaboración en equipo: Si trabajamos en un equipo, git pull permite obtener los cambios realizados 
+                                            por otros colaboradores y fusionarlos con nuestro trabajo.
+
                     git restore . Restaura todos los archivos en el árbol de trabajo a su estado en el último commit.
 
                     git restore --staged . Elimina todos los archivos del área de preparación, pero mantiene los cambios
@@ -104,6 +117,12 @@
 
                     git checkout -b: se utiliza para crear una nueva rama y cambiar a ella en un solo paso. Es una combinación 
                     de 2 comandos: git branch (para crear una nueva rama) y git checkout (para cambiar a esa rama).
+
+                    ¿Qué hace este comando? (git checkout -b feature)
+                     Crea una nueva rama: En este caso, se crea una nueva rama llamada feature.
+
+                     Cambia a la nueva rama: Después de crear la nueva rama, Git cambia automáticamente a esa rama, por lo 
+                     que cualquier cambio que realicemos a partir de ese momento se aplicará a la nueva rama.
 
                     *Para volver a uno de los commits enviados, por ejemplo una versión en donde una parte del
                      código de un programa existe y otra en donde no, debebos escribir:
