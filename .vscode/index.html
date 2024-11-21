@@ -68,6 +68,29 @@
 
                     *git reset bg65aj1 <- Colocar las iniciales del HASH del commit del que se desea reiniciar.
 
+                    git reset --hard HEAD~1: Elimina el último commit realizado y apunta al commit anterior al actual
+                                             (1 commit atrás).
+
+                    * HEAD: Apunta al commit actual en el que se está trabajando.
+                    * ~1: Apunta al commit anterior al actual.
+                    * ~2: Apunta a 2 commits atrás del actual, y así sucesivamente.
+
+                    git rm nombre_del_archivo: Elimina el archivo del índice de Git y del sistema de archivos.
+                    
+                    git restore nombre_del_archivo: Restaura el archivo a su estado en el último commit.
+
+                    git restore --staged nombre_del_archivo: Elimina el archivo del área de preparación, pero mantiene
+                                                             los cambios en el área de trabajo.
+
+                    git restore . Restaura todos los archivos en el árbol de trabajo a su estado en el último commit.
+
+                    git restore --staged . Elimina todos los archivos del área de preparación, pero mantiene los cambios
+                                           en el árbol de trabajo.
+                    
+                    rm nombre_del_archivo: Elimina el archivo solo del sistema de archivos.
+
+                    git add . agrega todos los archivos del directorio actual. (Es en donde estamos ubicados).
+
                     git commit: Guarda todos los cambios del Staging Area en el repositorio como un nuevo co-
                                 mmit.
                     
@@ -78,6 +101,9 @@
 
                     git checkout: Se utiliza para restaurar archivos, navegar por el historial
                                   de commits y cambiar entre ramas.
+
+                    git checkout -b: se utiliza para crear una nueva rama y cambiar a ella en un solo paso. Es una combinación 
+                    de 2 comandos: git branch (para crear una nueva rama) y git checkout (para cambiar a esa rama).
 
                     *Para volver a uno de los commits enviados, por ejemplo una versión en donde una parte del
                      código de un programa existe y otra en donde no, debebos escribir:
@@ -213,8 +239,15 @@
         <img src="img/logoGit.webp">
         <h1>Blog Curso-Git & GitHub</h1>
     </div>
-    <div>
-        Ubicacion del contenido del blog.
+    <div class="container" id="content">
+        <h3>Posts del usuario {nombre del usuario}</h3>
+        <div class="post">
+            <h4>Título del post</h4>
+            <p>Contenido del post</p>
+            <br>
+            <p><span>Usuario:</span>Comentario</p>
+        </div>
+        
     </div>
     <h1>Ranking de Videojuegos para PC 2023</h1>
 <ul>
