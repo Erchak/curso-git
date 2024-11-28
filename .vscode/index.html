@@ -82,6 +82,11 @@
                     git restore --staged nombre_del_archivo: Elimina el archivo del área de preparación, pero mantiene
                                                              los cambios en el área de trabajo.
 
+                    git remote: Muestra una lista de remotos configurados en nuestro repositorio local.
+
+                    git remote -v (verbose): Muestra una lista más detallada, incluyendo las URLs de los remotos y los
+                                             roles de fetch (obtener cambios) y push (enviar cambios). 
+
                     git merge: Se utiliza para combinar los cambios de una rama en otra. Es una forma de integrar el trabajo 
                                de diferentes ramas en una sola.
 
@@ -127,6 +132,22 @@
 
                     git branch -D: Elimina la rama secundaria NO fusionada con la principal.
 
+                    *La primera vez que se sube una rama se debe crear en el repositorio remoto.
+
+                    git clone: Se utiliza para copiar un repositorio remoto a nuestra máquina local. Descarga todo el
+                               contenido del repositorio, incluidos los archivos, el historial de commits, las ramas y
+                               las configuraciones del repositorio remoto.
+
+                    *Cuando se clona un repositorio, este ya viene con el origin predifinido.
+                     (origin = nombre por defecto que se asigna al repositorio remoto cuando se clona un repositorio.
+                     Es un alias que apunta a la URL del repositorio remoto, simplifica las referencias para no tener que
+                     usar la URL completa cada vez que interactuamos con el remoto.)
+
+                     Configurar un remoto llamado origin:
+
+                     Por defecto, origin se asigna al repositorio que clonamos (el remoto).
+                     Podemos usar git pull, git push, y otros comandos para interactuar con este remoto.
+
                     git commit: Guarda todos los cambios del Staging Area en el repositorio local como un nuevo co-
                                 mmit.
 
@@ -136,6 +157,9 @@
                                    bios confirmados en el repositorio.
 
                     *Luego de esto agregar correo y nombre de desarrollador.
+
+                    git commit -a: Salta el git add, sirve para hacer un add y un commit al mismo tiempo.
+                                   (Comando ShortCut).
 
                     git checkout: Se utiliza para restaurar archivos, navegar por el historial
                                   de commits y cambiar entre ramas.
@@ -204,6 +228,8 @@
 
                     * --graph: Añade una representación gráfica de las ramas y fusiones en el historial.
                     * --oneline: Muestra cada commit en una sola línea, lo que hace que en el historial sea más fácil de leer.
+                    
+                    git log -n 1: Sirve para mostrar el commit más reciente.
 
                     ¿Qué es detached HEAD? (Detached = aislado)
 
@@ -329,4 +355,6 @@
 </ul>
 </body>
 </html>
-
+<!-- Ctrl + K + C para comentar una línea de código. -->
+<!-- cambio 1 -->
+<!-- cambio 2 -->
