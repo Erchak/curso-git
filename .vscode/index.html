@@ -82,6 +82,43 @@
                     git restore --staged nombre_del_archivo: Elimina el archivo del área de preparación, pero mantiene
                                                              los cambios en el área de trabajo.
 
+                    git remote: Muestra una lista de remotos configurados en nuestro repositorio local.
+
+                    git remote -v (verbose): Muestra una lista más detallada, incluyendo las URLs de los remotos y los
+                                             roles de fetch (obtener cambios) y push (enviar cambios). 
+
+                    git merge: Se utiliza para combinar los cambios de una rama en otra. Es una forma de integrar el trabajo 
+                               de diferentes ramas en una sola.
+
+                    *Ejemplo: git checkout master
+                              git merge feature
+
+                     En el ejemplo anterior, primero cambiamos a la rama master y luego fusionamos los cambios de la rama 
+                     feature en master.
+                     
+                     ¿Cuándo usar git merge?
+                     Al integrar nuevas características: Cuando hemos terminado de trabajar en una nueva característica en 
+                     una rama separada y queremos integrar esos cambios en la rama principal.
+
+                    git push: Se utiliza para enviar los cambios que hemos realizado en nuestro repositorio local al 
+                              repositorio remoto. Comparte nuestros cambios con otros colaboradores y nos asegura de que el
+                              repositorio remoto esté actualizado con nuestro trabajo.
+
+                    *Después de hacer un commit o varios utilizamos git push para enviar esos cambios al repositorio remoto.
+
+                    git pull: Se utiliza para actualizar el repositorio local con los cambios más recientes del repositorio
+                              remoto.
+
+                    *Es una combinación de 2 comandos: git fetch (para descargar los cambios) y git merge (para fusionar 
+                                                       esos cambios en tu rama actual). 
+                                                       
+                    ¿Cuándo usar git pull?
+                    Mantener tu repositorio actualizado: Usamos git pull regularmente para asegurarnos de que nuestro 
+                                                         repositorio local esté sincronizado con el repositorio remoto.                                                        
+
+                    Colaboración en equipo: Si trabajamos en un equipo, git pull permite obtener los cambios realizados 
+                                            por otros colaboradores y fusionarlos con nuestro trabajo.
+
                     git restore . Restaura todos los archivos en el árbol de trabajo a su estado en el último commit.
 
                     git restore --staged . Elimina todos los archivos del área de preparación, pero mantiene los cambios
@@ -91,19 +128,52 @@
 
                     git add . agrega todos los archivos del directorio actual. (Es en donde estamos ubicados).
 
-                    git commit: Guarda todos los cambios del Staging Area en el repositorio como un nuevo co-
+                    git branch -d: Elimina la rama secundaria fusionada con la principal.
+
+                    git branch -D: Elimina la rama secundaria NO fusionada con la principal.
+
+                    *La primera vez que se sube una rama se debe crear en el repositorio remoto.
+
+                    git clone: Se utiliza para copiar un repositorio remoto a nuestra máquina local. Descarga todo el
+                               contenido del repositorio, incluidos los archivos, el historial de commits, las ramas y
+                               las configuraciones del repositorio remoto.
+
+                    *Cuando se clona un repositorio, este ya viene con el origin predifinido.
+                     (origin = nombre por defecto que se asigna al repositorio remoto cuando se clona un repositorio.
+                     Es un alias que apunta a la URL del repositorio remoto, simplifica las referencias para no tener que
+                     usar la URL completa cada vez que interactuamos con el remoto.)
+
+                     Configurar un remoto llamado origin:
+
+                     Por defecto, origin se asigna al repositorio que clonamos (el remoto).
+                     Podemos usar git pull, git push, y otros comandos para interactuar con este remoto.
+
+                    git commit: Guarda todos los cambios del Staging Area en el repositorio local como un nuevo co-
                                 mmit.
+
+                    *Los commits no van directamente al repositorio remoto, se guardan en el local. (Nuestro equipo).
                     
                     git commit -m: Se utiliza para añadir un mensaje de commit, breve descripción de los cam-
                                    bios confirmados en el repositorio.
 
                     *Luego de esto agregar correo y nombre de desarrollador.
 
+                    git commit -a: Salta el git add, sirve para hacer un add y un commit al mismo tiempo.
+                                   (Comando ShortCut).
+
                     git checkout: Se utiliza para restaurar archivos, navegar por el historial
                                   de commits y cambiar entre ramas.
 
                     git checkout -b: se utiliza para crear una nueva rama y cambiar a ella en un solo paso. Es una combinación 
                     de 2 comandos: git branch (para crear una nueva rama) y git checkout (para cambiar a esa rama).
+
+                    ¿Qué hace este comando? (git checkout -b feature) 
+                     Crea una nueva rama: En este caso, se crea una nueva rama llamada feature.
+
+                     *El nombre de la rama viene después de -b.
+
+                     Cambia a la nueva rama: Después de crear la nueva rama, Git cambia automáticamente a esa rama, por lo 
+                     que cualquier cambio que realicemos a partir de ese momento se aplicará a la nueva rama.
 
                     *Para volver a uno de los commits enviados, por ejemplo una versión en donde una parte del
                      código de un programa existe y otra en donde no, debebos escribir:
@@ -151,7 +221,13 @@
                                   errores.
 
                               3.- Colaboración: Mejora la comunicación y la colaboración en equipos al propor-
-                                  cionar un historial claro de los cambios. 
+                                  cionar un historial claro de los cambios.
+                                  
+                    git log --graph --oneline: Permite visualizar el historial de commits en nuestro repositorio de Git de
+                                               manera concisa y gráfica.
+
+                    * --graph: Añade una representación gráfica de las ramas y fusiones en el historial.
+                    * --oneline: Muestra cada commit en una sola línea, lo que hace que en el historial sea más fácil de leer.
 
                     ¿Qué es detached HEAD? (Detached = aislado)
 
@@ -235,9 +311,22 @@
     <title>Blog Curso-Git</title>
 </head>
 <body>
+    <nav>
+        <ul>
+            <li><a href="#Home">Home</a></li>
+            <li><a href="#Posts">Posts</a></li>
+            <li><a href="#Ranking">Ranking</a></li>
+            <li><a href="#Contact">Contact</a></li>
+            <li><a href="#About">About</a></li>
+        </ul>
+    </nav>
+    
     <div>
         <img src="img/logoGit.webp">
         <h1>Blog Curso-Git & GitHub</h1>
+    </div>
+    <div>
+        Aquí irá la publicidad.
     </div>
     <div class="container" id="content">
         <h3>Posts del usuario {nombre del usuario}</h3>
@@ -264,4 +353,6 @@
 </ul>
 </body>
 </html>
-
+<!-- Ctrl + K + C para comentar una línea de código. -->
+<!-- cambio 1 -->
+<!-- cambio 2 -->

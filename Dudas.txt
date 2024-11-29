@@ -1,0 +1,35 @@
+1.- ¿Cómo llegar al Manage Access?
+  R: Seleccionar un repositorio en específico, luego en 'Settings' después en 'Collaborators' y finalmente a la derecha 
+     de la lista dentro de 'Manage Access' en 'Add people'. Aquí se agrega a la persona por su e-mail, nombre de usuario
+     o nombre completo.
+
+2.- ¿Qué es Markdown?
+  R: Lenguaje de marcado ligero, se utiliza para aplicar diferentes estilos y estructuras al texto para mejorar su legibilidad y
+     presentación. Por ejemplo: Aplicar Negrita, Cursiva, encabezados, listas, enlaces y más.
+
+3.- ¿Qué es renderizar como markdown en Git? Revisar si lo hace GitLab o BitBucket.
+  R: El texto escrito en Markdown lo convierte en un formato visualmente atractivo y estructurado. El proceso de renderizado
+     convierte la sintaxis Markdown en HTML pues, este último asegura que el contenido sea compatible con navegadores web 
+     y se muestre de manera consistente y atractiva.
+
+4.- ¿Cómo usar el editor de texto VIM integrado de VS Code al estar usando Git? 
+  R: Cuando ejecutamos un comando de Git que requiera un editor de texto, como git commit (sin un mensaje), Git abrirá Vim
+     automáticamente en el terminal integrado de VS Code.
+
+    * J para bajar y O para escribir un título y mensaje.
+    * Para salir es: Tecla Esc, luego dos puntos (:) seguido de w (de escribir, 'write') y finalmente q (de quit, salir) luego Enter.
+
+5.- ¿Cuál es el enlace que pone GitHub al issue correspondiente?
+
+
+
+6.- ¿Qué es el git rebase?
+  R: Limpia el historial de commits.
+
+
+6.- ¿?
+
+
+
+7.- ¿?
+
