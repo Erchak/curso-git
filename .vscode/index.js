@@ -1,3 +1,4 @@
 const loadAdds = () => {
-    console.log('2 Adds loaded.');
+    console.log('4 Adds loaded.');
+    console.log(res);
 }
